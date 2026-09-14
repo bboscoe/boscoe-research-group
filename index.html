@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-884WJ0PN1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-884WJ0PN1V');
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Bernie Boscoe is an Associate Professor of Computer Science at Southern Oregon University and Principal Investigator of the Boscoe Research Group, developing computational infrastructure for collaborative science.">
   <title>Bernie Boscoe | Boscoe Research Group</title>
   <style>
     :root {
-      --ink: #182126;
+      /* Colors follow SOU's official Graphic Standards: Raider Red (Pantone 186 / #C8102E)
+         and Raider Black are the university's two school colors; Dark Red is one of the
+         approved secondary support colors, used here for hover states. */
+      --ink: #17181a;
       --muted: #5d6a70;
-      --paper: #fbfaf7;
+      --paper: #ffffff;
       --panel: #ffffff;
       --line: #d9ddd9;
-      --accent: #6f2f2a;
-      --accent-dark: #4d211e;
+      --accent: #c8102e;
+      --accent-dark: #a10d25;
       --soft: #f0ece7;
       --max: 1120px;
     }
@@ -36,7 +48,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(251,250,247,.96);
+      background: rgba(255,255,255,.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -48,12 +60,16 @@
       gap: 24px;
     }
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-weight: 750;
       letter-spacing: .01em;
       color: var(--ink);
       text-decoration: none;
       white-space: nowrap;
     }
+    .brand-logo { height: 34px; width: auto; }
     .nav-links { display: flex; flex-wrap: wrap; gap: 18px; justify-content: flex-end; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: .92rem; font-weight: 600; }
     .nav-links a:hover { color: var(--accent); }
@@ -61,7 +77,7 @@
     .hero {
       padding: 84px 0 72px;
       border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, #f7f3ef 0%, var(--paper) 100%);
+      background: linear-gradient(180deg, #f7f7f7 0%, var(--paper) 100%);
     }
     .hero-grid {
       display: grid;
@@ -74,7 +90,7 @@
       aspect-ratio: 2 / 3;
       object-fit: cover;
       border-radius: 18px;
-      box-shadow: 0 16px 40px rgba(24,33,38,.14);
+      box-shadow: 0 16px 40px rgba(23,24,26,.14);
     }
     .eyebrow {
       text-transform: uppercase;
@@ -85,7 +101,7 @@
       margin: 0 0 12px;
     }
     h1, h2, h3 { line-height: 1.15; letter-spacing: -.025em; }
-    h1 { font-size: clamp(2.7rem, 6vw, 5rem); margin: 0 0 14px; }
+    h1 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin: 0 0 14px; }
     h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 22px; }
     h3 { font-size: 1.42rem; margin: 0 0 10px; }
     .hero-role { font-size: 1.14rem; margin: 4px 0; color: var(--muted); }
@@ -112,7 +128,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(24,33,38,.05);
+      box-shadow: 0 8px 24px rgba(23,24,26,.05);
     }
     .card-media { width: 100%; height: 290px; object-fit: cover; background: #eee; }
     .card-media.arch { object-fit: contain; padding: 12px; background: #f5f7fa; }
@@ -230,7 +246,10 @@
 
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">Boscoe Research Group</a>
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="images/sou-logo.png" alt="Southern Oregon University">
+        <span>Boscoe Research Group</span>
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -253,8 +272,8 @@
         <p class="hero-role">Associate Professor of Computer Science</p>
         <p class="hero-role">Southern Oregon University</p>
         <p class="pi-line">Principal Investigator, Boscoe Research Group</p>
-        <p class="tagline">Computational infrastructure for collaborative science.</p>
-        <p>We build research software, data systems, and computational methods that help scientific groups work with complex data, preserve knowledge, and sustain research across long-running collaborations.</p>
+        <p class="tagline">Research on computational infrastructure for collaborative science.</p>
+        <p>The group develops research software, data systems, and computational methods that help scientific groups work with complex data, preserve knowledge, and sustain research across long-running collaborations.</p>
         <div class="button-row">
           <a class="btn primary" href="#research">Research</a>
           <a class="btn" href="https://www.bernieboscoe.com" target="_blank" rel="noopener">Bio</a>
@@ -278,7 +297,7 @@
     <section id="research">
       <div class="wrap">
         <h2>Research</h2>
-        <p class="section-lead">Two research areas, one common problem: building computational infrastructure that remains useful inside real scientific collaborations.</p>
+        <p class="section-lead">The group's current work spans two areas: scientific knowledge systems and computer vision for long-term ecological monitoring. Both are concerned with building computational infrastructure that continues to function within active, long-running research collaborations.</p>
         <div class="two-col">
           <article class="card">
             <img class="card-media arch" src="https://aquillm.org/images/aquillm-arch.png" alt="AquiLLM system architecture diagram">
@@ -298,11 +317,11 @@
           <article class="card">
             <img class="card-media" src="https://greencrossingai.github.io/images/detections_animal_08140009.JPG" alt="Camera-trap wildlife image with computer vision detection box">
             <div class="card-body">
-              <p class="card-kicker">Computer vision + ecology</p>
+              <p class="card-kicker">Computer vision and ecology</p>
               <h3>Green Crossing AI</h3>
               <p>Green Crossing AI develops computer vision methods and research software for long-term wildlife monitoring, bringing together computer science and environmental science at Southern Oregon University.</p>
               <p>The project uses camera-trap imagery, reproducible data pipelines, and computer vision to support research on wildlife movement and ecological change, while giving undergraduate researchers substantive roles in scientific software and data analysis.</p>
-              <p class="project-funding"><strong>Funding:</strong> WILDLABS + Arm</p>
+              <p class="project-funding"><strong>Funding:</strong> WILDLABS and Arm</p>
               <div class="project-links">
                 <a href="https://greencrossingai.github.io/" target="_blank" rel="noopener">Project website →</a>
                 <a href="https://github.com/GreenCrossingAI" target="_blank" rel="noopener">GitHub →</a>
@@ -377,7 +396,7 @@
         <div class="funding-strip">
           <div class="funding-item"><img src="https://aquillm.org/images/nsf.png" alt="NSF logo"><span>National Science Foundation</span></div>
           <div class="funding-item"><img src="https://aquillm.org/images/sloan.png" alt="Alfred P. Sloan Foundation logo"><span>Alfred P. Sloan Foundation</span></div>
-          <div class="funding-item"><span class="wildlabs-mark" aria-label="WILDLABS">WILDLABS</span><span>WILDLABS + Arm</span></div>
+          <div class="funding-item"><span class="wildlabs-mark" aria-label="WILDLABS">WILDLABS</span><span>WILDLABS and Arm</span></div>
         </div>
       </div>
     </section>
@@ -430,12 +449,13 @@
       <div class="wrap">
         <h2>Selected Talks &amp; Posters</h2>
         <ul class="talk-list">
+          <li><strong>AquiLLM: An Architecture for Supporting Tacit Knowledge Capture in Research Groups.</strong> NGEN-AI 2026, Trento, Italy, 2026.</li>
           <li><strong>AI education and research with national infrastructure: lessons from AquiLLM and NAIRR.</strong> CIAO Cyberinfrastructure Alliance for Oregon Workshop, Portland, 2026.</li>
           <li><strong>AquiLLM: a RAG-LLM for Capturing Tacit Knowledge in Research Groups.</strong> CounterBalance — Institutions and Interpretive Authority, Santa Fe Institute, 2026.</li>
           <li><strong>Teaching Scalable Wildlife Image Processing with NAIRR Jetstream2 GPUs to Undergraduates.</strong> NAIRR Conference, Arlington, 2026.</li>
           <li><strong>Green crossings: Student/Machine Learning in the Life Sciences.</strong> 4S Conference, Amsterdam, 2024.</li>
           <li><strong>Arrays from the Sky: Astronomy and Data Science/Computer Science Collaborations.</strong> Willamette University, 2024.</li>
-          <li><strong>Scaling Up: Incorporating HPC Experience into Undergraduate Data Science using Gateways.</strong> ADMI, Atlanta, 2024.</li>
+          <!-- <li><strong>Scaling Up: Incorporating HPC Experience into Undergraduate Data Science using Gateways.</strong> ADMI, Atlanta, 2024.</li> -->
         </ul>
       </div>
     </section>
@@ -444,7 +464,7 @@
       <div class="wrap">
         <h2>Contact</h2>
         <div class="contact-box">
-          <p><strong>Southern Oregon University students interested in research with the Boscoe Research Group are welcome to get in touch.</strong></p>
+          <p><strong>SOU students interested in joining the Boscoe Research Group are welcome to get in touch.</strong></p>
           <p>Email: <a href="mailto:boscoeb@sou.edu">boscoeb@sou.edu</a><br>
           GitHub: <a href="https://github.com/bboscoe" target="_blank" rel="noopener">github.com/bboscoe</a><br>
           ORCID: <a href="https://orcid.org/0000-0001-6790-7297" target="_blank" rel="noopener">0000-0001-6790-7297</a></p>
